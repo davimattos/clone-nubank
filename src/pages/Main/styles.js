@@ -20,7 +20,7 @@ export const Card = styled.View`
   flex: 1;
   background: #FFF;
   border-radius: 4px;
-  margin: 0 20px;
+  margin: 0 20px 30px;
   height: 100%;
 `;
 
@@ -38,6 +38,9 @@ export const CardContent = styled.View`
 `;
 
 export const CardFooter = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 30px;
   background: #eee;
   border-radius: 4px;
@@ -55,6 +58,6 @@ export const Description = styled.Text`
 `;
 
 export const Annotation = styled.Text`
-  font-size: 10px;
+  font-size: 12px;
   color: #333;
 `;

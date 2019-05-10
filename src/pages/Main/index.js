@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import Header from '~/components/Header';
 import Tabs from '~/components/Tabs';
@@ -17,17 +17,19 @@ export default function Main() {
       <Content>
         <Card>
           <CardHeader>
-            <Icon name="attach-money" size={28} color="#666"/>
-            <Icon name="visibility-off" size={28} color="#666"/>
+            <Icon name="credit-card" size={28} color="#666"/>
+            <Icon name="eye-slash" size={28} color="#666"/>
           </CardHeader>
           <CardContent>
             <Title>Saldo disponível</Title>
             <Description>R$ 27.897,09</Description>
           </CardContent>
           <CardFooter>
+            {/* <Icon name="" size={28} color="#8B10AE"/> */}
             <Annotation>
-              Transferência de R$ 10,00 recebida de Davi Mattos as 15:35h
+              Transferência de R$ 10,00 recebida hoje
             </Annotation>
+            <Icon name="angle-right" size={26} color="#666"/>
           </CardFooter>
         </Card>
       </Content>
