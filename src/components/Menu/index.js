@@ -1,10 +1,10 @@
 import React from 'react';
 
 import QRCode from 'react-native-qrcode';
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {
-  Container, Code, Nav, NavItem, NavText, SignOutButtom, SignOutButtomText
+  Container, Code, Nav, NavItem, NavText, SignOutButtom, SignOutButtomText,
 } from './styles';
 
 export default function Menu({ translateY }) {
@@ -48,5 +48,5 @@ export default function Menu({ translateY }) {
         <SignOutButtomText>SAIR DO APP</SignOutButtomText>
       </SignOutButtom>
     </Container>
-  )
+  );
 }
