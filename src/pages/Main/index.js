@@ -41,44 +41,45 @@ export default function Main() {
 
   function onHandlerStateChanged(event) {
     if (event.nativeEvent.oldState === State.ACTIVE) {
-      let opened = false;
+      let openedY = false;
+      let openedX = false;
       const { translationY } = event.nativeEvent;
       const { translationX } = event.nativeEvent;
 
       offsetY += translationY;
       offsetX += translationX;
 
-      if (translationY >= 100) {
-        opened = true;
+      if (translationY >= 200) {
+        openedY = true;
       } else {
         translateY.setOffset(offsetY);
         translateY.setValue(0);
         offsetY = 0;
       }
-      if (translationX >= 400) {
-        opened = true;
+      if (translationX <= -200) {
+        openedX = true;
       } else {
-        translateX.setOffset(offsetY);
+        translateX.setOffset(offsetX);
         translateX.setValue(0);
-        offsetY = 0;
+        offsetX = 0;
       }
 
       Animated.timing(translateY, {
-        toValue: opened ? 380 : 0,
+        toValue: openedY ? 380 : 0,
         duration: 200,
         useNativeDriver: true,
       }).start(() => {
-        offsetY = opened ? 380 : 0;
+        offsetY = openedY ? 380 : 0;
         translateY.setOffset(offsetY);
         translateY.setValue(0);
       });
 
       Animated.timing(translateX, {
-        toValue: opened ? 400 : 0,
+        toValue: openedX ? -400 : 0,
         duration: 200,
         useNativeDriver: true,
       }).start(() => {
-        offsetX = opened ? 400 : 0;
+        offsetX = openedX ? -400 : 0;
         translateX.setOffset(offsetX);
         translateX.setValue(0);
       });
@@ -110,7 +111,7 @@ export default function Main() {
                 },
                 {
                   translateX: translateX.interpolate({
-                    inputRange: [-400, 0, 100],
+                    inputRange: [-400, 0, 200],
                     outputRange: [-400, 0, 0],
                     extrapolate: 'clamp',
                   }),
