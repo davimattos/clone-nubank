@@ -28,9 +28,8 @@ export const Card = styled.View`
   height: 350;
   width: 380;
   background-color: #fff;
-  padding: 10px;
   margin: 10px;
-  border-radius: 4px;
+  border-radius: 3px;
 `;
 
 export const CardHeader = styled.View`
