@@ -5,7 +5,7 @@ import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 export const Container = styled.View`
   flex: 1;
-  background-color: #8B10AE;
+  background-color: #8b10ae;
   padding-top: ${getStatusBarHeight()}px;
   padding-bottom: ${getStatusBarHeight()}px;
   justify-content: center;
@@ -17,23 +17,26 @@ export const Content = styled.View`
   z-index: 5;
 `;
 
-export const Card = styled(Animated.View)`
-  flex: 1;
-  background: #FFF;
-  border-radius: 4px;
-  margin: 0 20px 30px;
+export const CardContainer = styled(Animated.View)`
   height: 100%;
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+  margin: 10px 10px;
+  flex-direction: row;
+`;
+
+export const Card = styled.View`
+  height: 350;
+  width: 380;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 4px;
 `;
 
 export const CardHeader = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 30px;
+  margin: 20px 20px;
 `;
 
 export const CardContent = styled.View`

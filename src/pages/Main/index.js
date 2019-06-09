@@ -11,6 +11,7 @@ import Menu from '~/components/Menu';
 import {
   Container,
   Content,
+  CardContainer,
   Card,
   CardHeader,
   CardContent,
@@ -54,7 +55,7 @@ export default function Main() {
         translateY.setValue(0);
         offsetY = 0;
       }
-      if (translationX >= 100) {
+      if (translationX >= 400) {
         opened = true;
       } else {
         translateX.setOffset(offsetY);
@@ -73,11 +74,11 @@ export default function Main() {
       });
 
       Animated.timing(translateX, {
-        toValue: opened ? 380 : 0,
+        toValue: opened ? 400 : 0,
         duration: 200,
         useNativeDriver: true,
       }).start(() => {
-        offsetX = opened ? 380 : 0;
+        offsetX = opened ? 400 : 0;
         translateX.setOffset(offsetX);
         translateX.setValue(0);
       });
@@ -95,7 +96,9 @@ export default function Main() {
           onGestureEvent={animatedEvent}
           onHandlerStateChange={onHandlerStateChanged}
         >
-          <Card
+          <CardContainer
+            horizontal
+            showsHorizontalScrollIndicator
             style={{
               transform: [
                 {
@@ -115,18 +118,20 @@ export default function Main() {
               ],
             }}
           >
-            <CardHeader>
-              <Icon name="attach-money" size={28} color="#666" />
-              <Icon name="visibility-off" size={28} color="#666" />
-            </CardHeader>
-            <CardContent>
-              <Title>Saldo disponível</Title>
-              <Description>R$ 27.897,09</Description>
-            </CardContent>
-            <CardFooter>
-              <Annotation>Transferência de R$ 10,00 recebida hoje</Annotation>
-            </CardFooter>
-          </Card>
+            <Card>
+              <CardHeader>
+                <Icon name="attach-money" size={28} color="#666" />
+                <Icon name="visibility-off" size={28} color="#666" />
+              </CardHeader>
+              <CardContent>
+                <Title>Saldo disponível</Title>
+                <Description>R$ 27.897,09</Description>
+              </CardContent>
+              <CardFooter>
+                <Annotation>Transferência de R$ 10,00 recebida hoje</Annotation>
+              </CardFooter>
+            </Card>
+          </CardContainer>
         </PanGestureHandler>
       </Content>
 
