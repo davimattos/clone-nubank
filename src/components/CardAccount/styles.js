@@ -5,7 +5,7 @@ export const Card = styled.View`
   width: 380;
   background-color: #fff;
   margin: 10px;
-  border-radius: 3px;
+  border-radius: 2px;
 `;
 
 export const CardHeader = styled.View`
@@ -15,18 +15,19 @@ export const CardHeader = styled.View`
 `;
 
 export const CardContent = styled.View`
-  flex: 1;
+  flex: 5;
   padding: 0 30px;
-  justify-content: center;
+  margin-top: 10px;
 `;
 
 export const CardFooter = styled.View`
+  flex: 1;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 30px;
   background: #eee;
-  border-radius: 4px;
+  border-radius: 2px;
 `;
 
 export const Title = styled.Text`
@@ -43,4 +44,5 @@ export const Description = styled.Text`
 export const Annotation = styled.Text`
   font-size: 12px;
   color: #333;
+  width: 70%;
 `;

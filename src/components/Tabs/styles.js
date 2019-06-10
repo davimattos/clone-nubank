@@ -15,7 +15,7 @@ export const TabsContainer = styled.ScrollView.attrs({
 export const TabItem = styled.View`
   width: 100px;
   height: 100px;
-  background-color: rgba(145, 64, 169, 0.5);
+  background-color: rgba(145, 64, 169, 1);
   border-radius: 3px;
   margin-left: 10px;
   padding: 10px;
