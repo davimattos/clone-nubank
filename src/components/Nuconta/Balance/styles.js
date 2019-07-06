@@ -15,13 +15,18 @@ export const BankBalance = styled.View`
 
 export const Title = styled.Text`
   font-size: 13px;
-  font-weight: 500;
-  color: #999;
+  color: #333;
 `;
 
 export const Description = styled.Text`
   font-size: 32px;
   margin-top: 3px;
+  color: #333;
+`;
+
+export const BalanceSave = styled.Text`
+  font-size: 13px;
+  font-weight: 900;
   color: #333;
 `;
 
