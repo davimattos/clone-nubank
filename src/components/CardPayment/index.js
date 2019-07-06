@@ -26,7 +26,8 @@ export default function CardPayment() {
       <CardContainer>
         <CardHeader>
           <CardIcon>
-            <Icon name="payment" size={30} color="#666" />
+            <Icon name="payment" size={28} color="#666" />
+            <Annotation>Cartão de crédito</Annotation>
           </CardIcon>
           <CardContent>
             <Title>FATURA FECHADA</Title>

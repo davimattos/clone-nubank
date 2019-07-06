@@ -20,7 +20,8 @@ export const CardHeader = styled.View`
 
 export const CardIcon = styled.View`
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
   margin: 20px 30px;
 `;
 
@@ -56,17 +57,17 @@ export const AvailableLimit = styled.View`
 export const CardContent = styled.View`
   flex: 1;
   padding: 0 30px;
-  margin-top: 10px;
+  margin-top: 25px;
 `;
 
 export const CardFooter = styled.View`
-  flex: 1;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
   padding: 20px 25px;
   background: #eee;
   border-radius: 2px;
+  height: 90px;
 `;
 
 export const Title = styled.Text`
