@@ -3,11 +3,11 @@ import React from 'react';
 import { Animated } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 
-import Header from '~/components/Header';
-import Tabs from '~/components/Tabs';
-import Menu from '~/components/Menu';
-import CardPayment from '~/components/CardPayment';
-import CardAccount from '~/components/CardAccount';
+import Header from '~/components/Main/Header';
+import Tabs from '~/components/Main/Tabs';
+import Menu from '~/components/Main/Menu';
+import CardPayment from '~/components/Main/CardPayment';
+import CardAccount from '~/components/Main/CardAccount';
 
 import { Container, Content, CardContainer } from './styles';
 

@@ -30,7 +30,7 @@ export default function CardAccount() {
       <CardFooter>
         <Icon name="polymer" size={28} color="#666" />
         <Annotation>Transferência de R$ 10,00 recebida hoje</Annotation>
-        <Icon name="replay" size={28} color="#666" />
+        <Icon name="keyboard-arrow-right" size={28} color="#666" />
       </CardFooter>
     </Card>
   );

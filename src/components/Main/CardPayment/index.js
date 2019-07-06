@@ -47,7 +47,7 @@ export default function CardPayment() {
       <CardFooter>
         <Icon name="palette" size={28} color="#666" />
         <Annotation>Compra mais recente em Empório Gourmet no valor de R$ 122,89 hoje</Annotation>
-        <Icon name="replay" size={28} color="#666" />
+        <Icon name="keyboard-arrow-right" size={28} color="#666" />
       </CardFooter>
     </Card>
   );
